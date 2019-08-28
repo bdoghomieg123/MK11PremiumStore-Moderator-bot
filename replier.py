@@ -125,7 +125,7 @@ def main():
     print("Bot is Starting up... Please Wait...")
     time.sleep(2)
     comments_already_seen = []
-    subreddit = reddit.subreddit('MK11PremiumStore') #The subreddit that it searches for the comments
+    subreddit = reddit.subreddit('bdoghomieg123') #The subreddit that it searches for the comments
     runNow = False
     #init setup. lets the user know that the bot isn't ready until it loops back to newer comments
     for comment in subreddit.stream.comments():
@@ -135,12 +135,13 @@ def main():
             print("Bot Initialization Complete.")
             time.sleep(3)
             clear()
-            print("Searching comments on", subreddit)
+            print("Searching comments on r/",subreddit)
             runNow = True
         #if comment.distinguished:
-        if comment.distinguished and comment.created_utc > start_time:#Looks for comments that are, mod distinguished and were created after the bot was started
+        if comment.distinguished and comment.created_utc > start_time:#Looks for comments that are mod distinguished and were created after the bot was started
             if comment.stickied: #If comment is stickied, performs the bot's action
-                if 'kitana' in comment.body.lower():
+
+                if 'new kontent on: kitana' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Kitana_subs[0:])+"\n\n\n"+"New kontent on Kitana Has been posted")
                         comments_already_seen.append(comment.id)
@@ -148,7 +149,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'jade' in comment.body.lower():
+                elif 'new kontent on: jade' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Jade_subs[0:])+"\n\n\n"+"New kontent on Jade Has been posted")
                         comments_already_seen.append(comment.id)
@@ -156,7 +157,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'kabal' in comment.body.lower():
+                elif 'new kontent on: kabal' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Kabal_subs[0:])+"\n\n\n"+"New kontent on Kabal Has been posted")
                         comments_already_seen.append(comment.id)
@@ -165,7 +166,7 @@ def main():
                         clear()
 
 
-                elif 'kung lao' in comment.body.lower():
+                elif 'new kontent on: kung lao' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(KL_subs[0:])+"\n\n\n"+"New kontent on Kung Lao Has been posted")
                         comments_already_seen.append(comment.id)
@@ -174,7 +175,7 @@ def main():
                         clear()
 
 
-                elif 'sub-zero' in comment.body.lower():
+                elif 'new kontent on: sub-zero' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(SZ_subs[0:])+"\n\n\n"+"New kontent on Sub-Zero Has been posted")
                         comments_already_seen.append(comment.id)
@@ -182,7 +183,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'sub zero' in comment.body.lower():
+                elif 'new kontent on: sub zero' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(SZ_subs[0:])+"\n\n\n"+"New kontent on Sub-Zero Has been posted")
                         comments_already_seen.append(comment.id)
@@ -190,7 +191,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'scorpion' in comment.body.lower():
+                elif 'new kontent on: scorpion' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Scorpion_subs[0:])+"\n\n\n"+"New kontent on Scorpion Has been posted")
                         comments_already_seen.append(comment.id)
@@ -199,7 +200,7 @@ def main():
                         clear()
 
 
-                elif 'cetrion' in comment.body.lower():
+                elif 'new kontent on: cetrion' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Cetrion_subs[0:])+"\n\n\n"+"New kontent on Cetrion Has been posted")
                         comments_already_seen.append(comment.id)
@@ -207,7 +208,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'frost' in comment.body.lower():
+                elif 'new kontent on: frost' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Frost_subs[0:])+"\n\n\n"+"New kontent on Frost Has been posted")
                         comments_already_seen.append(comment.id)
@@ -215,7 +216,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'baraka' in comment.body.lower():
+                elif 'new kontent on: baraka' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Baraka_subs[0:])+"\n\n\n"+"New kontent on Baraka Has been posted")
                         comments_already_seen.append(comment.id)
@@ -223,7 +224,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'raiden' in comment.body.lower():
+                elif 'new kontent on: raiden' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Raiden_subs[0:])+"\n\n\n"+"New kontent on Raiden Has been posted")
                         comments_already_seen.append(comment.id)
@@ -231,7 +232,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif 'shao kahn' in comment.body.lower():
+                elif 'new kontent on: shao kahn' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(SK_subs[0:])+"\n\n\n"+"New kontent on Shao Kahn Has been posted")
                         comments_already_seen.append(comment.id)
@@ -239,7 +240,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "d'vorah" in comment.body.lower():
+                elif "new kontent on: d'vorah" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(DVH_subs[0:])+"\n\n\n"+"New kontent on D'vorah Has been posted")
                         comments_already_seen.append(comment.id)
@@ -248,7 +249,7 @@ def main():
                         clear()
 
 
-                elif "jax" in comment.body.lower():
+                elif "new kontent on: jax" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Jax_subs[0:])+"\n\n\n"+"New kontent on Jax Has been posted")
                         comments_already_seen.append(comment.id)
@@ -256,7 +257,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "geras" in comment.body.lower():
+                elif "new kontent on: geras" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Geras_subs[0:])+"\n\n\n"+"New kontent on Geras Has been posted")
                         comments_already_seen.append(comment.id)
@@ -264,7 +265,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "kano" in comment.body.lower():
+                elif "new kontent on: kano" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Kano_subs[0:])+"\n\n\n"+"New kontent on Kano Has been posted")
                         comments_already_seen.append(comment.id)
@@ -272,7 +273,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "nightwolf" in comment.body.lower():
+                elif "new kontent on: nightwolf" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Nightwolf_subs[0:])+"\n\n\n"+"New kontent on Nightwolf Has been posted")
                         comments_already_seen.append(comment.id)
@@ -280,7 +281,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "cassie cage" in comment.body.lower():
+                elif "new kontent on: cassie cage" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(CC_subs[0:])+"\n\n\n"+"New kontent on Cassie Cage Has been posted")
                         comments_already_seen.append(comment.id)
@@ -288,7 +289,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "kotan kahn" in comment.body.lower():
+                elif "new kontent on: kotan kahn" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(KK_subs[0:])+"\n\n\n"+"New kontent on Kotan Kahn Has been posted")
                         comments_already_seen.append(comment.id)
@@ -296,7 +297,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "skarlet" in comment.body.lower():
+                elif "new kontent on: skarlet" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Skarlet_subs[0:])+"\n\n\n"+"New kontent on Skarlet Has been posted")
                         comments_already_seen.append(comment.id)
@@ -304,7 +305,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "sonya blade" in comment.body.lower():
+                elif "new kontent on: sonya blade" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(SB_subs[0:])+"\n\n\n"+"New kontent on Sonya Blade Has been posted")
                         comments_already_seen.append(comment.id)
@@ -312,7 +313,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "shang tsung" in comment.body.lower():
+                elif "new kontent on: shang tsung" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(ST_subs[0:])+"\n\n\n"+"New kontent on Shang Tsung Has been posted")
                         comments_already_seen.append(comment.id)
@@ -320,7 +321,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "johnny cage" in comment.body.lower():
+                elif "new kontent on: johnny cage" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(JC_subs[0:])+"\n\n\n"+"New kontent on Johnny Cage Has been posted")
                         comments_already_seen.append(comment.id)
@@ -328,7 +329,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "noob saibot" in comment.body.lower():
+                elif "new kontent on: noob saibot" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(NS_subs[0:])+"\n\n\n"+"New kontent on Noob Saibot Has been posted")
                         comments_already_seen.append(comment.id)
@@ -336,7 +337,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "kollector" in comment.body.lower():
+                elif "new kontent on: kollector" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Kollector_subs[0:])+"\n\n\n"+"New kontent on Kollector Has been posted")
                         comments_already_seen.append(comment.id)
@@ -344,7 +345,7 @@ def main():
                         time.sleep(3)
                         clear()
 
-                elif "jacqui briggs" in comment.body.lower():
+                elif "new kontent on: jacqui briggs" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling All kombatants\n\n"+str(Kollector_subs[0:])+"\n\n\n"+"New kontent on Jacqui Briggs Has been posted")
                         comments_already_seen.append(comment.id)

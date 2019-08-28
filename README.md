@@ -1,10 +1,13 @@
-# Complete Rewrite for alpha 3.0 #
-## Current Version: alpha v1.0 ##
-
-***This is part one of many in the move towards rewriting the bot for efficiency***
-
+# Complete Rewrite for full release v1.0 #
+## Current Version: alpha v2.0 ##
 
 # Changelog #
+
+## Changes in alpha v1.0 ##
+- Added a function that only searches for a subreddit format that was implemented in order to elimiate false positives for bot replies. Prior to this change, the bot would recognize the first character mentioned in the comment regardless of whether or not the new content post was about them. Now, this format eliminates them provided that the moderators use the proper format. (Please note: Bot will not reply to any comments if the format is not followed.)
+
+
+## Changes from older versions: ##
 
 - Readded "and comment.created_utc > start_time:" to the beginning of the main function. I intend to fix it. This function is to make sure that it only replies to comments that were created after the initial launch of the bot. ~~As of beta v13.3a, it only works about 40% of  the time, and only for certain characters. Next release should fix that.~~ ***This function now works as of alpha v1.0*** If you run into issues with the bot not replying to anything and just showing "The Bot is now ready", add a # to the beginning of line 138 and remove the # from line 139 then run the bot. (Or if you want to search comments from the past )
 
@@ -16,11 +19,13 @@
 
 # TODO #
 
+- Use variables to define the praw.ini authentication fields so that a user may run this bot from an EXE file (expected to be implemented by or in release v1.0).
+
 - Utilize characters.txt for reading usernames. (File not yet in use. It just exists in the repo for the future.)
 
 - ~~Fix issue where bot only replies a certain percentage of the time~~
 
-- Work out solution to issue where a false positive will ensue if two different characters are mentioned in one comment
+- ~~Work out solution to issue where a false positive will ensue if two different characters are mentioned in one comment~~ Issue fixed by implementing a format for the moderators of the subreddit to use which the bot will search for. Instead of just a character name, the bot will now search for "New kontent on:" Followed by the character name. 
 
 # Moderator bot for MK11PremiumStore #
 
@@ -45,7 +50,7 @@ To use this program, follow these instructions:
     - Redirect URL: Same as About URL.
     - Click "Create app"
     - Keep this tab open for the "Setting up Praw.ini" section.
-    - Text editor: If you don't have any special text editor other than notepad, I recommend Geany. It's free, and in my opinion, it's easier to run programs in geany. install geany from [here.](https://www.geany.org/download/releases/)
+    - (Optional) Install Geany text editor for easy code editing and running. I only recommend this text editor because it's easy to use and install, however, this is not an absolutely required step. It's just here if you want it to make running the bot easier. (Please Note: I am not affilated with Geany or its developers in any way, it is just the first text editor that I used when learning how to code and it made running Python scripts easier.
     - Open main.py in geany. This file looks small I know. However, all the brains of the app is in replier.py. The main.py file optimizes it for running 24/7 on a hosted server so that in the event that Reddit or the API goes down temporarily, you don't have to manually restart it as it will be constantly running due to the While True: Try/Except exception condition.
     - To run program in geany, simply press the F5 key.
     - Thank You and I hope you enjoy this program!
@@ -73,7 +78,7 @@ To use this program, follow these instructions:
 - Install pip package manager in order to install the praw module. If you already have Python pip3 installed, skip this step. If you don't, or are unsure, type "sudo apt-get install Python3-pip." (If using macOS, the command is: )
 
 
-- (Optional) Install Geany text editor for easy code editing. I only recommend this text editor because it's easy to use and install, however, this is not an absolutely required step. It's just here if you want it.
+- (Optional) Install Geany text editor for easy code editing and running. I only recommend this text editor because it's easy to use and install, however, this is not an absolutely required step. It's just here if you want it to make running the bot easier. (Please Note: I am not affilated with Geany or its developers in any way, it is just the first text editor that I used when learning how to code and it made running Python scripts easier.)
 
 
 - Setting up the Praw.ini. (See above: Setting up the Praw.ini file.)
@@ -109,7 +114,7 @@ To use this program, follow these instructions:
     Simply add a space, write 'u/<username>\n\n' (with the single quote. Output will be messy if you use traditional quotation marks.) It's Simple as that. Adding "\n\n" at the end of every u/ is vital, as that means "New line" which spaces out the comment to make it readable and less jumbled.
 
 
-- To Remove a user, just remove 'u/<username>' and they will not receive mentions anymore.
+- To Remove a user, just remove 'u/[username]' and they will not receive mentions anymore.
 
 - To edit the reply text for a certain character, go to the elif statement with that character's name, find the line that starts with "comment.reply" and edit the text within the quotation marks. (Note: Do not touch the text that says something like "+str(Cetrion_subs[0:])" That is the part of the code that adds all the subscriber's usernames to the comment.)
 
