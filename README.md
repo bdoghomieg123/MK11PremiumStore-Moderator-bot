@@ -3,7 +3,7 @@
 
 # Changelog #
 
-## Changes in alpha v1.0 ##
+## Changes in alpha v2.0 ##
 - Added a function that only searches for a subreddit format that was implemented in order to elimiate false positives for bot replies. Prior to this change, the bot would recognize the first character mentioned in the comment regardless of whether or not the new content post was about them. Now, this format eliminates them provided that the moderators use the proper format. (Please note: Bot will not reply to any comments if the format is not followed.)
 
 
@@ -18,6 +18,8 @@
 - Fixed issue where the elif statements were listed inside the Kitana if statement and the elif statements would never have a condition to run.
 
 # TODO #
+
+- Find solution for bug where bot won't recognize a comment if "New kontent for: [character]" is in the comment twice. This is a low priority issue considering that during normal usage, this would never really become an issue provided the subreddit moderators closely follow the format. 
 
 - Use variables to define the praw.ini authentication fields so that a user may run this bot from an EXE file (expected to be implemented by or in release v1.0).
 
