@@ -125,7 +125,7 @@ def main():
     print("Bot is Starting up... Please Wait...")
     time.sleep(2)
     comments_already_seen = []
-    subreddit = reddit.subreddit('bdoghomieg123') #The subreddit that it searches for the comments
+    subreddit = reddit.subreddit('MK11PremiumStore') #The subreddit that it searches for the comments
     runNow = False
     #init setup. lets the user know that the bot isn't ready until it loops back to newer comments
     for comment in subreddit.stream.comments():
