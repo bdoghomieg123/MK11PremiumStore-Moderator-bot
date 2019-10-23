@@ -1,15 +1,8 @@
-# Complete Rewrite for full release v1.0 #
-## Current Version: alpha v2.0 ##
-
 # Changelog #
-
-## Changes in alpha v2.0 ##
-- Added a function that only searches for a subreddit format that was implemented in order to elimiate false positives for bot replies. Prior to this change, the bot would recognize the first character mentioned in the comment regardless of whether or not the new content post was about them. Now, this format eliminates them provided that the moderators use the proper format. (Please note: Bot will not reply to any comments if the format is not followed.)
-
 
 ## Changes from older versions: ##
 
-- Readded "and comment.created_utc > start_time:" to the beginning of the main function. I intend to fix it. This function is to make sure that it only replies to comments that were created after the initial launch of the bot. ~~As of beta v13.3a, it only works about 40% of  the time, and only for certain characters. Next release should fix that.~~ ***This function now works as of alpha v1.0*** If you run into issues with the bot not replying to anything and just showing "The Bot is now ready", add a # to the beginning of line 138 and remove the # from line 139 then run the bot. (Or if you want to search comments from the past )
+- Readded "and comment.created_utc > start_time:" to the beginning of the main function. I intend to fix it. This function is to make sure that it only replies to comments that were created after the initial launch of the bot.
 
 - Optimized bot for running 24/7 on a hosted server. This was done by creating a While true: Try/Except exception condition which tries to execute the main program, but if it runs into any errors, it doesn't exit. It just restarts. This will also show debug codes.
 
@@ -19,21 +12,14 @@
 
 # TODO #
 
-- Find solution for bug where bot won't recognize a comment if "New kontent for: [character]" is in the comment twice. This is a low priority issue considering that during normal usage, this would never really become an issue provided the subreddit moderators closely follow the format. 
-
-- Use variables to define the praw.ini authentication fields so that a user may run this bot from an EXE file (expected to be implemented by or in release v1.0).
+- Find solution for bug where bot won't recognize multiple characters if "New kontent for: [character]" is in the comment twice. This is a low priority issue considering that during normal usage, this would never really become an issue provided the subreddit moderators closely follow the format. ***Currently working on this***
 
 - Utilize characters.txt for reading usernames. (File not yet in use. It just exists in the repo for the future.)
 
-- ~~Fix issue where bot only replies a certain percentage of the time~~
-
-- ~~Work out solution to issue where a false positive will ensue if two different characters are mentioned in one comment~~ Issue fixed by implementing a format for the moderators of the subreddit to use which the bot will search for. Instead of just a character name, the bot will now search for "New kontent on:" Followed by the character name. 
 
 # Moderator bot for MK11PremiumStore #
 
-Hello! Welcome to the biggest bot I have ever written by far.
-
-This is a bot that searches a Moderator's distinguished comment for each one of the characters within the file, and mentions the people who subscribed for notifications in a reply to the original comment. scroll down to the bottom to see the instructions on modifying the subscriber lists and reply text.
+Hello! This is a bot that searches a Moderator's distinguished comment for each one of the characters within the file, and mentions the people who subscribed for notifications in a reply to the original comment. scroll down to the bottom to see the instructions on modifying the subscriber lists and reply text.
 
 If you encounter any bugs, the program replies with/to something it shouldn't, or you'd like to suggest a feature, file an issue report, or message me on reddit at u/kapow-bitch and I will see what I can do to improve it.
 
@@ -59,7 +45,7 @@ To use this program, follow these instructions:
 
 
 # Setting up Praw.ini.
-- You will next need to setup the Praw.ini file. I have included a shell file for you within the files. It is in the folder "init praw file." On many online examples, you'll see people plug their credentials straight into their main python file. I discourage doing that as it just leaves your credentials out in the open for people to see if you share that file with others and forget that your credentials are still in there.
+- You will next need to setup the Praw.ini file. I have included a shell file for you within the files. It is in the folder "init praw file." You will need to rename this file to praw.ini and put it in the same folder as main.py. On many online examples, you'll see people plug their credentials straight into their main python file. I discourage doing that as it just leaves your credentials out in the open for people to see if you share that file with others and forget that your credentials are still in there.
     - Open the Praw.ini shell file from the repository.
     - Open the tab with the app you just created.
     - client_id: 2 spaces underneath your script name is the client_id. Copy and paste that into your Praw.ini file under "client_id"
