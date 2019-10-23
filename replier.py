@@ -3,7 +3,8 @@ import os #send commands to the CMD/Terminal. This is complimentary to the commo
 import time #Used to create the start_time variable and slow down the speed at which some actions happen
 from common import clear #Small little library I wrote for organizing things I commonly use in programs
 import re #regular expression operations
-import pprint #Used for debbuging praw modules.
+
+
 
 
 reddit = praw.Reddit('bot1')
