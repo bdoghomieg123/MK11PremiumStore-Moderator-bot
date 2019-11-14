@@ -1,7 +1,7 @@
 # Complete Rewrite for alpha 3.0 #
 ## Current Version: alpha v1.0 ##
 
-***This is part one of many in the move towards rewriting the bot for efficiency***
+***let this be a warning that I have literally no idea what I'm doing with this program. it's currently just inherently broken***
 
 
 # Changelog #
