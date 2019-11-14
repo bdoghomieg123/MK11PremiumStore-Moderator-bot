@@ -20,7 +20,7 @@
 
 - ~~Fix issue where bot only replies a certain percentage of the time~~
 
-- Work out solution to issue where a false positive will ensue if two different characters are mentioned in one comment
+- Work out solution to issue where a false positive will ensue if two different characters are mentioned in one comment [Can't be accomplished until i rewrite the program]
 
 # Moderator bot for MK11PremiumStore #
 
