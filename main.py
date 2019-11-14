@@ -9,9 +9,11 @@ from replier import main
 reddit = praw.Reddit('bot1')
 
 while True:
+
+    
     try:
         print("Hello. Welcome to the MK11PremiumStore character update notification bot")
-        input("\nThis bot is in alpha testing. It may not run as intended.\n\nPress ENTER to acknowledge and continue...")
+        input("\nThis bot is in alpha testing. It may not run as intended.\n\nPress ENTER to acknowledge and kontinue...")
         clear()
         main()
 
