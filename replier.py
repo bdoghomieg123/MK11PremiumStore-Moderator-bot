@@ -19,7 +19,6 @@ Kitana2_subs_original = ['u/Kanzuki_\n\n' 'u/Destroyer-YRU\n\n' 'u/mealzonwheelz
 Kitana2_subs = ', '.join(map(str, Kitana2_subs_original))
 
 
-#test
 #Kitana 3 Subs
 Kitana3_subs_original = ['u/king_ash\n\n' 'u/Deaf30\n\n' 'u/Nox_Box\n\n']
 Kitana3_subs = ', '.join(map(str, Kitana3_subs_original))
