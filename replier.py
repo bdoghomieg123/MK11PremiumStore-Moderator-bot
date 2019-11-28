@@ -18,6 +18,8 @@ Kitana_subs = ', '.join(map(str, Kitana_subs_original))
 Kitana2_subs_original = ['u/Kanzuki_\n\n' 'u/Destroyer-YRU\n\n' 'u/mealzonwheelz90\n\n']
 Kitana2_subs = ', '.join(map(str, Kitana2_subs_original))
 
+
+#test
 #Kitana 3 Subs
 Kitana3_subs_original = ['u/king_ash\n\n' 'u/Deaf30\n\n' 'u/Nox_Box\n\n']
 Kitana3_subs = ', '.join(map(str, Kitana3_subs_original))
@@ -206,7 +208,7 @@ def main():
         #if comment.distinguished:
         if comment.distinguished and comment.created_utc > start_time:#Looks for comments that are, mod distinguished and were created after the bot was started
             if comment.stickied: #If comment is stickied, performs the bot's action
-				
+
                 if 'kitana' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(Kitana_subs[0:])+"\n\n\n"+"New kontent for Kitana Kahn is available")
@@ -250,7 +252,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif 'sub-zero' in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(SZ_subs[0:])+"\n\n\n"+"New kontent for Sub-Zero is available")
@@ -341,7 +343,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "nightwolf" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(Nightwolf_subs[0:])+"\n\n\n"+"New kontent for Nightwolf is available")
@@ -375,7 +377,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "kotal" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(KK_subs[0:])+"\n\n\n"+"New kontent for Kotal Kahn is available")
@@ -401,7 +403,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "sonya" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(SB_subs[0:])+"\n\n\n"+"New kontent for Sonya Blade is available")
@@ -417,7 +419,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "shang" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(ST_subs[0:])+"\n\n\n"+"New kontent for Shang Tsung is available")
@@ -433,7 +435,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "johnny" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(JC_subs[0:])+"\n\n\n"+"New kontent for Johnny Cage is available. This guy isn't serious, is he?")
@@ -450,7 +452,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "noob" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(NS_subs[0:])+"\n\n\n"+"New kontent for Noob Saibot is available. I refuse to stop making fun of your edgy boi.")
@@ -475,7 +477,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "jacqui" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(JB_subs[0:])+"\n\n\n"+"New kontent for Jacqui Briggs is available")
@@ -483,7 +485,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "liu kang" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(LK_subs[0:])+"\n\n\n"+"New kontent for The Chosen One is available")
@@ -494,7 +496,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "erron black" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(EB_subs[0:])+"\n\n\n"+"New kontent for Erron Black is available. Yeehaw.")
@@ -503,7 +505,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "erron" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(EB_subs[0:])+"\n\n\n"+"New kontent for Erron Black is available. Yeehaw.")
@@ -512,7 +514,7 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
+
                 elif "terminator" in comment.body.lower():
                     if comment.id not in comments_already_seen:
                         comment.reply("Calling kombatants\n\n"+str(TRM_subs[0:])+"\n\n\n"+"New kontent for the Terminator is available. Your Krystals...give them to me...now!")
@@ -522,5 +524,3 @@ def main():
                         print("Replied to", comment.body)
                         time.sleep(3)
                         clear()
-                        
-                        
